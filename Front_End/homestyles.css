@@ -1,0 +1,528 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #f8f9fa;
+    position: fixed;
+    width:100%;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    margin-right:250px;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    margin-top:150px;
+}
+#adrs1{
+    display: block;
+    margin-left: -520px;
+    margin-top: -40px;
+    position: absolute;
+}
+
+@media (max-width: 1240px) {
+
+    #adrs1{
+      margin-left:-380px;
+    }
+  
+  }
+
+  @media (max-width: 1165px) {
+
+    #adrs1{
+      margin-left:-840px;
+    }
+  
+  }
+
+  @media (max-width: 1010px) {
+
+    #adrs1{
+      margin-left:-750px;
+    }
+  
+  }
+  @media (max-width: 900px) {
+
+    #adrs1{
+      margin-left:-650px;
+    }
+  
+  }
+  @media (max-width: 725px) {
+
+    #adrs1{
+      margin-left:-550px;
+    }
+  
+  }
+
+  @media (max-width: 1330px) {
+
+    .info{
+        margin-top:-420px;
+        margin-left:400px;
+        
+    }
+    #lsits{
+        width:600px;
+    }
+  
+  }
+  @media (max-width: 1170px) {
+
+    .info{
+        margin-top:-400px;
+        margin-left:300px;
+        
+    }
+    #lsits{
+        width:600px;
+    }
+  
+  }
+
+  @media (max-width: 800px) {
+
+   .logo{
+    margin-left: 20px;
+   }
+  
+  }
+
+
+  @media (max-width: 1015px) {
+
+    .info{
+        margin-top:-350px;
+        margin-left:290px;
+        
+    }
+    #lsits{
+        width:500px;
+    }
+  
+  }
+
+  @media (max-width: 915px) {
+
+    .info{
+        margin-top:-300px;
+        margin-left:200px;
+        
+    }
+    #lsits{
+        width:600px;
+    }
+  
+  }
+
+
+  @media (max-width: 1361px) {
+
+    #img1{
+      margin-left:-770px;
+    }
+  
+  }
+
+  @media (max-width: 1145px) {
+
+    #img1{
+      margin-left:-730px;
+    }
+  
+  }
+  @media (max-width: 1100px) {
+
+    #img1{
+      margin-left:-700px;
+    }
+  
+  }
+
+  @media (max-width: 1040px) {
+
+    #img1{
+      margin-left:-650px;
+    }
+  
+  }
+  @media (max-width: 970px) {
+
+    #img1{
+      margin-left:-600px;
+    }
+  
+  } 
+
+
+  @media (max-width: 895px) {
+
+    .info{
+        margin-top:-270px;
+        margin-left:150px;
+        
+    }
+    #lsits{
+        width:600px;
+    }
+  
+  }
+
+  @media (max-width:830px) {
+
+    .info{
+        margin-top:-50px;
+        margin-left:15px;
+        
+    }
+    #lsits{
+        width:600px;
+    }
+    #img1{
+        display: none;
+    }
+  
+  }
+
+  @media (max-width: 720px) {
+
+    .info{
+        margin-top:-20px;
+        margin-left:20px;
+        
+    }
+    #lsits{
+        width:500px;
+    }
+  
+  }
+  @media (max-width: 585px) {
+
+    .info{
+        margin-top:-25px;
+        margin-left:5px;
+        
+    }
+    #lsits{
+        width:500px;
+    }
+    #infohead{
+        margin-left: -20px;
+    }
+  
+  }
+
+  @media (max-width:620px) {
+
+    #adrs1{
+        margin-left:-450px;
+    }
+    #menubtn{
+        margin-left: -130px;
+    }
+  
+  }
+  @media (max-width: 565px) {
+
+    .info{
+        margin-top:-25px;
+        margin-left:-20px;
+        
+    }
+    #lsits{
+        width:450px;
+    }
+    #infohead{
+        margin-left: -20px;
+    }
+  
+  }
+
+  @media (max-width: 1165px) {
+    .navbar #navelists{
+      display:flex;
+      flex-direction:column;
+      background-color: #1c1a84;
+      position: fixed;
+      top: 0;
+      right:-290px;
+      height: 100%;
+      width: 250px;
+      z-index: 1000;
+      transition: right 0.3s ease;
+      border:2px solid black;
+      border-top-left-radius: 70px;
+  
+    }
+    .navbar ul{
+      display: flex;
+      margin-top: -10px;
+      flex-direction:column;
+     
+      
+    }
+    .navbar ul li{
+      display:flex;
+      
+      margin-left: 60px;
+      
+    }
+    .navbar #navelists a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 20px;
+      border-bottom: 1px solid #555;
+     
+    }
+  
+    .navbar #navelists a:hover {
+      background-color: #555;
+    }
+  
+    .navbar #navelists #close-btn {
+      
+      font-size: 1.5rem;
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+      display: block;
+      margin-left:-10px;
+    }
+  
+  
+  }
+  @media (max-width: 570px) {
+
+    .testimonialss{
+      margin-top:10px;
+    }
+    .programss{
+      height:850px;
+      margin-top:-10px;
+    }
+    .programss h2{
+      margin-top:-15px;
+    }
+    .programm{
+      height: 200px;
+      width: 200px;
+    }
+    .program-listt{
+      margin-top: -10px;
+    }
+    #program2{
+      margin-top:270px;
+    }
+    #idbtn{
+      margin-top:540px;
+    }
+    #program3{
+      margin-top:550px;
+      margin-left: 30px;
+    }
+    #program2h3{
+      font-size:24px;
+      text-align: center;
+      margin-left:6px;
+      margin-top: -10px;
+    }
+    #program2p{
+      margin-top:130px;
+      margin-left:-180px;
+    }
+    #program1 h3,p{
+      margin-top:-2px;
+    }
+    #program3 h3,p{
+      margin-top:5px;
+    }
+    #program3 p{
+      margin-top:95px;
+    }
+  
+  
+  }
+  @media (max-width: 477px) {
+    .info{
+      width:150px;
+      margin-left: -49px;
+    }
+    .info ul{
+      margin-top:60px;
+    }
+    #lis{
+      margin-top:280px;
+    }
+    #infohead{
+      display: flex;
+      flex-direction: row;
+      margin-left:100px;
+      margin-top:-70px;
+      position: absolute;
+
+    }
+  
+  }
+  @media (max-width: 445px) {
+
+     .lis{
+      width:400px;
+      position: absolute;
+      margin-left:30px;
+      
+     }
+    #student-testimonials{
+      margin-top:1400px;
+    }
+    #infohead{
+      margin-left:100px;
+
+    }
+    header{
+      z-index: 1000;
+    }
+    
+  
+  }
+  header{
+    z-index: 1000;
+  }
+
+  @media (max-width: 490px) {
+    #adrs1{
+      display: none;
+
+    }
+    .logo{
+      margin-left:50px;
+    }
+
+        
+    }
+    @media (max-width: 425px) {
+
+      .info{
+          margin-top:-25px;
+          margin-left:-65px;
+      }
+      }
+
+      @media (max-width: 405px) {
+
+        .info{
+            margin-top:-25px;
+            margin-left:-20px;
+            
+        }
+        .lis{
+          width:350px;
+          position: absolute;
+          margin-left:-10px;
+          
+         }
+         #infohead{
+          margin-left:50px;
+    
+        }
+      }
+      @media (max-width: 355px) {
+
+        .info{
+            margin-top:-25px;
+            margin-left:-5px;
+            
+        }
+        .lis{
+          width:300px;
+          position: absolute;
+          margin-left:-10px;
+          
+         }
+         #infohead{
+          margin-left:10px;
+    
+        }
+      }
+
+      @media (max-width: 440px) {
+        #navbarr{
+          margin-left:30px;
+        }
+
+       
+      }
+
+      @media (max-width: 360px) {
+
+        #navbarr{
+          margin-left:50px;
+        }
+        .testimonialss{
+          margin-top:5px;
+        }
+        #programss{
+          height:870px;
+        }
+      }
+      @media (max-width: 315px) {
+
+        .lis{
+          width:270px;
+          position: absolute;
+          margin-left:-12px;
+          
+         }
+         #infohead{
+          margin-left:-2px;
+    
+        }
+      #student-testimonials{
+        margin-top:1600px;
+      }
+      .testimonialss{
+        margin-top:0px;
+      }
+      #programss{
+        height:950px;
+      }
+      .program-listt{
+        margin-left: -20px;
+      }
+      
+       
+      }
+
+      @media (max-width: 335px) {
+        .hero-text #h111,#p111,#a11{
+          margin-top:45px;
+        }
+        .hero-text h1{
+          margin-left:-10px;
+        }
+        .testimonialss{
+          margin-top:5px;
+        }
+        #programss{
+          height:970px;
+        }
+      
+      
+      }
+
+      @media (max-width: 490px) {
+        .hero-text #h111,#p111,#a11{
+          margin-top:45px;
+        }
+      
+      }
