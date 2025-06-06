@@ -15,19 +15,7 @@ app.use(cors());
 const dotenv = require('dotenv')
 dotenv.config();
 // Data base connaction
-const db = mysql.createConnection({
-    host:process.env.DB_HOST,
-    user:process.env.DB_USER,
-    password:process.env.DB_PASSWORD,
-    database:process.env.DB_NAME
-});
 
-db.connect((err) => {
-    if (err) { 
-        throw err;
-    }
-    console.log('MySQL Connecteed...');
-});
 
 //Routing
 
@@ -43,86 +31,35 @@ app.get('/home', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-    res.sendFile(path.join(__dirname,'Front_End','about.html'))
+    res.sendFile(path.join(__dirname,'Front_End','index.html'))
 });
 
 app.get('/contact', (req, res) => {
-    res.sendFile(path.join(__dirname,'Front_End','contact.html'))
+    res.sendFile(path.join(__dirname,'Front_End','index.html'))
 });
 
-app.get('/services', (req, res) => {
-    res.sendFile(path.join(__dirname,'Front_End','services.html'))
+app.get('/skills', (req, res) => {
+    res.sendFile(path.join(__dirname,'Front_End','index.html'))
 });
 
-app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname,'Front_End','login.html'))
+app.get('/projects', (req, res) => {
+    res.sendFile(path.join(__dirname,'Front_End','project.html'))
 });
 
-app.get('/gallary', (req, res) => {
-    res.sendFile(path.join(__dirname,'Front_End','gallary.html'))
-});
-app.get('/register', (req, res) => {
-    res.sendFile(path.join(__dirname,'Front_End','register.html'))
+app.get('/achivments', (req, res) => {
+    res.sendFile(path.join(__dirname,'Front_End','index.html'))
 });
 
 
 
-//rejister
-
-
-app.post('/Register', (req, res) => {
-    const { username1,email1, password1 } = req.body;
-
-    db.query('SELECT Name FROM login WHERE Email = ?', [email1], (err, result) => {
-        if (err) throw err;
-        if (result.length > 0) {
-            return res.status(400).send('User already exists!');
-        } 
-else{
-   
-bcrypt.hash(password1, 10, (err, hash) => {
-    if (err) throw err;
-    db.query('INSERT INTO login (Name,Email, Password) VALUES (?, ?,?)', [username1,email1, hash], (err, result) => {
-        if (err) throw err;
-        res.send('User registered successfully!');
-    });
-});
-   
-}
-    });
- 
-});
-  
-//login
-
-
-app.post('/Login', (req, res) => {
-    const {username,password } = req.body;
-
-    db.query('SELECT * FROM login WHERE Email = ?', [username], (err, result) => {
-        if (err) throw err;
-        if (result.length > 0) {
-            bcrypt.compare(password, result[0].Password, (err, match) => {
-                
-                if (match) {
-                    res.send("loading.....")
-                } else {
-                    res.send("Incorrect password!")  
-                }
-            });
-        } else {
-            res.status(400).send('User not found!');
-        }
-    });
-});
 
 
 //Nodemailer
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "justforchacke@gmail.com", 
-      pass: "mbzk yvwr dfpl ammn", 
+      user:process.env.Email_USER,
+      pass:process.env.Email_PASSWORD, 
     },
   });
   
@@ -136,7 +73,7 @@ const transporter = nodemailer.createTransport({
   
     const mailOptions = {
       from: email,
-      to: "justforchacke@gmail.com", 
+      to: "wabitena@gmail.com", 
       subject: `${subject} from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     };

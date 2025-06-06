@@ -1,299 +1,1327 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Scholars Education</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="homestyles.css">
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-  
-
-  
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Home</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#10b981'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+scroll-behavior: smooth;
+}
+.font-poppins {
+font-family: 'Poppins', sans-serif;
+}
+.hero-section {
+background-image: url('https://readdy.ai/api/search-image?query=modern%20minimalist%20abstract%20digital%20art%20with%20gradient%20blue%20and%20purple%20shapes%20on%20the%20right%20side%2C%20clean%20white%20space%20on%20the%20left%20side%2C%20perfect%20for%20web%20design%20background%2C%20professional%2C%20sleek%2C%20high-end%2C%20suitable%20for%20portfolio%20website%2C%204k%20resolution&width=1920&height=1080&seq=hero1&orientation=landscape');
+background-size: cover;
+background-position: center;
+height: 100vh;
+min-height: 700px;
+}
+.nav-link {
+position: relative;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -4px;
+left: 0;
+background-color: #3b82f6;
+transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+width: 100%;
+}
+.active::after {
+width: 100%;
+}
+.name-animation {
+animation: fadeInUp 1s ease-out forwards;
+}
+.tagline-animation {
+animation: fadeInUp 1s ease-out 0.3s forwards;
+opacity: 0;
+}
+.cta-animation {
+animation: fadeInUp 1s ease-out 0.6s forwards;
+opacity: 0;
+}
+@keyframes fadeInUp {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+.scroll-indicator {
+animation: bounce 2s infinite;
+}
+@keyframes bounce {
+0%, 20%, 50%, 80%, 100% {
+transform: translateY(0);
+}
+40% {
+transform: translateY(-10px);
+}
+60% {
+transform: translateY(-5px);
+}
+}
+.project-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.project-overlay {
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+.project-card:hover .project-overlay {
+opacity: 1;
+}
+input:focus, textarea:focus {
+outline: none;
+border-color: #3b82f6;
+}
+</style>
 </head>
-<body>
-    <!-- Header Section -->
-    <header>
-        <div class="logo">
-            <img src="img/logo.jpg" alt="New Scholars Education Logo">
-        </div>
-        
-        <nav class="navbar">
-
-          <div id="adrs1">
-            <p><i class="fas fa-map-marker-alt"></i> 1st Floor st.mikael, Nekemte, Ethiopa</p>
-      <p><i class="fas fa-phone-alt"></i> 0576606900      <i class="fas fa-envelope"></i>  info@newscholarsedu.com</p>
-      
-          </div>
-          <div id="menubtn">
-            <h2 id="navbarr">&#9782;</h2>
-            
-          </div>
-          
-       <div id="navelists">
-            <ul>
-           
-                <li id="close-btn"><a>&times;</a></li>
-                <li><a href="about.html">About..Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="gallary.html">Gallery</a></li>
-                <li><a href="contact.html">Contact..Us</a></li>
-                <li><a href="login.html">Login</a></li>
-              
-            </ul>
-          </div>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1 id="h111">Welcome to New Scholars Education</h1>
-            <p id="p111">Learn, Grow, and Excel with our tailored education and training services.</p>
-            <a id="a11" href="services.html" class="btn">Explore Courses</a>
-            <a id ="a11" href="contact.html" class="btn btn-secondary">Contact Us</a>
-        </div>
-    </section>
-
-    <!-- Quick Info Section -->
-    <section class="quick-info">
-      <img src="img/photo1.jpg" alt="photo1" id="img1">
-        <div class="info">
-          
-            <h2 id="infohead">Why Choose Us?</h2>
-            <ul style="line-height:2em;" id="lsits">
-               <div class="lis">
-              <li style="line-height:2em;">  1. Tailored Learning Experience
-At New Scholars Education, we believe every student is unique. Our 
-personalized approach ensures that each learner receives the guidance 
-and support they need to excel.
-</li >
-<li style="line-height:2em;"> 2. Expert Educators
-Our team consists of highly qualified and passionate 
-educators dedicated to inspiring and empowering students
- to achieve their academic and personal goals.
-</li>
-<li style="line-height:2em;"> 
-3. Cutting-Edge Resources
-We provide access to modern learning tools, technology, and resources that make education interactive, engaging, and impactful.
-</li>
-<li>4. Flexible and Accessible
-With both in-person and online options, we make learning accessible to everyone, regardless of location or schedule.
-</li>
-<li> Proven Results
-Join a community of successful students who have improved their skills, gained confidence, and achieved academic excellence with our help.
-</li>
-<li>6. Holistic Development
-We focus not just on academics but also on critical thinking, creativity, and emotional intelligence to prepare students for real-world challenges.
-</li>
-<li>7. Community and Collaboration
-Be part of a supportive and inclusive learning community where collaboration and teamwork drive success.
-</li>
+<body class="bg-white">
+<!-- Navigation -->
+<nav class="fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-20">
+<div class="flex items-center">
+<a href="#" id="brand-logo" class="text-2xl font-['Pacifico'] text-primary hover:opacity-80 transition-opacity">Wabi<span class="ml-1">Tena</span></a>
 </div>
-            </ul>
-        </div>
-    </section>
+<div class="hidden md:flex items-center space-x-8">
+<a href="#" class="nav-link active text-gray-900 font-medium">Home</a>
+<a href="#about" class="nav-link text-gray-600 hover:text-gray-900 font-medium">About</a>
+<a href="#projects" class="nav-link text-gray-600 hover:text-gray-900 font-medium">Projects</a>
+<a href="#skills" class="nav-link text-gray-600 hover:text-gray-900 font-medium">Skills</a>
+<a href="#achievements" class="nav-link text-gray-600 hover:text-gray-900 font-medium">Achievements</a>
+<a href="#contact" class="nav-link text-gray-600 hover:text-gray-900 font-medium">Contact</a>
+</div>
+<div class="flex md:hidden items-center">
+<button type="button" id="mobile-menu-button" class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-gray-900 focus:outline-none">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu, show/hide based on menu state -->
+<div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg">
+<div class="px-2 pt-2 pb-3 space-y-1">
+<a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-primary bg-gray-50">Home</a>
+<a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50">About</a>
+<a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Projects</a>
+<a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Skills</a>
+<a href="#achievements" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Achievements</a>
+<a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Contact</a>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="hero-section w-full flex items-center relative">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+<div class="md:w-1/2 py-20">
+<h1 class="name-animation text-5xl md:text-6xl lg:text-7xl font-bold font-poppins text-gray-900 mb-4">
+Wabi <span class="text-primary">Tena</span>
+</h1>
+<p class="tagline-animation text-xl md:text-2xl text-gray-700 mb-8 font-light">
+Software Developer & UI/UX Designer crafting digital experiences that blend innovation with usability
+</p>
+<div class="cta-animation flex flex-col sm:flex-row gap-4">
+<a href="#projects" class="bg-primary text-white px-8 py-3 !rounded-button text-lg font-medium inline-flex items-center justify-center whitespace-nowrap hover:bg-primary/90 transition-colors">
+View My Work
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+<a href="#contact" class="border-2 border-gray-900 text-gray-900 px-8 py-3 !rounded-button text-lg font-medium inline-flex items-center justify-center whitespace-nowrap hover:bg-gray-900 hover:text-white transition-colors">
+Get In Touch
+</a>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 scroll-indicator">
+<div class="w-8 h-12 flex items-center justify-center border-2 border-gray-700 rounded-full">
+<div class="w-1.5 h-3 bg-gray-700 rounded-full"></div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold font-poppins text-gray-900">About Me</h2>
+<div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="relative">
+<div class="w-full h-[500px] bg-gray-200 rounded-lg overflow-hidden">
+<img src="image1.jpg" alt="Wabi Tena" class="w-full h-full object-cover object-top">
+</div>
+<div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg">
+<div class="flex space-x-4">
+<a href="https://www.linkedin.com/in/mouse-delivery-775a93369?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-primary hover:text-white text-gray-600 rounded-full transition-colors">
+<i class="ri-linkedin-fill ri-lg"></i>
+</a>
+<a href="https://github.com/wabitana" class="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-primary hover:text-white text-gray-600 rounded-full transition-colors">
+<i class="ri-github-fill ri-lg"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=100078928085875" class="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-primary hover:text-white text-gray-600 rounded-full transition-colors">
+<i class="ri-facebook-fill ri-lg"></i>
+</a>
+<a href="https://t.me/Wabi_Tena" class="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-primary hover:text-white text-gray-600 rounded-full transition-colors">
+<i class="ri-telegram-fill ri-lg"></i>
+</a>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-2xl font-semibold font-poppins text-gray-900 mb-4">Software Developer & Designer</h3>
+<p class="text-gray-700 mb-6 leading-relaxed">
+With over 5 years of experience in the digital realm, I specialize in creating immersive web experiences that bridge the gap between functionality and aesthetics. My journey began in graphic design before evolving into frontend development, giving me a unique perspective on digital product creation.
+</p>
+<p class="text-gray-700 mb-8 leading-relaxed">
+I believe that great design is invisible – it should enhance the user experience without drawing attention to itself. My approach combines clean code, intuitive interfaces, and strategic thinking to create digital solutions that not only look beautiful but also solve real problems.
+</p>
+<div class="grid grid-cols-2 gap-6 mb-8">
+<div>
+<h4 class="text-lg font-medium text-gray-900 mb-2">Location</h4>
+<p class="text-gray-700 flex items-center">
+<i class="ri-map-pin-line mr-2 text-primary"></i> Addis Ababa, Ethiopia
+</p>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-900 mb-2">Experience</h4>
+<p class="text-gray-700 flex items-center">
+<i class="ri-time-line mr-2 text-primary"></i> 5+ Years
+</p>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-900 mb-2">Education</h4>
+<p class="text-gray-700 flex items-center">
+<i class="ri-graduation-cap-line mr-2 text-primary"></i> pursuing Bsc. of software engineering at ASTU.
+</p>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-900 mb-2">Availability</h4>
+<p class="text-gray-700 flex items-center">
+<i class="ri-calendar-check-line mr-2 text-primary"></i> Available for Freelance
+</p>
+</div>
+</div>
+<a href="WabiTenaResume.pdf" class="inline-flex items-center justify-center px-6 py-3 bg-gray-900 text-white !rounded-button whitespace-nowrap hover:bg-gray-800 transition-colors">
+<i class="ri-download-line mr-2"></i>
+Download Resume
+</a>
+</div>
+</div>
+<!-- Timeline -->
+<div class="mt-20">
+<h3 class="text-2xl font-semibold font-poppins text-gray-900 text-center mb-12">Career Journey</h3>
+<div class="relative">
+<!-- Vertical line -->
+<div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-200"></div>
+<!-- Timeline items -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
+<!-- Item 1 -->
+<div class="md:col-start-2 md:pl-12 relative mb-12">
+<div class="absolute left-0 md:left-[-24px] top-0 transform md:translate-x(-50%) w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center z-10">
+<i class="ri-briefcase-4-line ri-lg"></i>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+<span class="text-sm font-medium text-primary">2023 - Present</span>
+<h4 class="text-xl font-semibold text-gray-900 mt-1">Senior UX Engineer</h4>
+<p class="text-gray-600 mt-1">Innovate Studio</p>
+<p class="text-gray-700 mt-3">Led the redesign of the company's flagship product, resulting in a 40% increase in user engagement and a significant reduction in customer support tickets.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="md:col-start-1 md:pr-12 md:text-right relative mb-12">
+<div class="absolute right-0 md:right-[-24px] top-0 transform md:translate-x(50%) w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center z-10">
+<i class="ri-briefcase-4-line ri-lg"></i>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+<span class="text-sm font-medium text-primary">2020 - 2023</span>
+<h4 class="text-xl font-semibold text-gray-900 mt-1">UI/UX Developer</h4>
+<p class="text-gray-600 mt-1">TechVision Inc.</p>
+<p class="text-gray-700 mt-3">Collaborated with cross-functional teams to develop responsive web applications and design systems that improved consistency across products.</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="md:col-start-2 md:pl-12 relative mb-12">
+<div class="absolute left-0 md:left-[-24px] top-0 transform md:translate-x(-50%) w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center z-10">
+<i class="ri-briefcase-4-line ri-lg"></i>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+<span class="text-sm font-medium text-primary">2018 - 2020</span>
+<h4 class="text-xl font-semibold text-gray-900 mt-1">Frontend Developer</h4>
+<p class="text-gray-600 mt-1">Digital Crafters</p>
+<p class="text-gray-700 mt-3">Built interactive websites and web applications for clients across various industries, focusing on performance optimization and accessibility.</p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="md:col-start-1 md:pr-12 md:text-right relative">
+<div class="absolute right-0 md:right-[-24px] top-0 transform md:translate-x(50%) w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center z-10">
+<i class="ri-graduation-cap-line ri-lg"></i>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+<span class="text-sm font-medium text-primary">2016 - 2018</span>
+<h4 class="text-xl font-semibold text-gray-900 mt-1">Bsc. in Human-Computer Interaction</h4>
+<p class="text-gray-600 mt-1">Stanford University</p>
+<p class="text-gray-700 mt-3">Focused on user-centered design methodologies and conducted research on improving digital accessibility for users with disabilities.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section id="projects" class="py-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold font-poppins text-gray-900">Featured Projects</h2>
+<div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+<p class="text-gray-700 mt-6 max-w-2xl mx-auto">Explore a selection of my most recent work across various disciplines, from web applications to interactive experiences.</p>
+</div>
+<!-- Project Filters -->
+<div class="flex flex-wrap justify-center gap-3 mb-12">
+<button class="filter-btn active px-6 py-2 !rounded-button bg-primary text-white whitespace-nowrap hover:bg-primary/90 transition-colors" data-filter="all">All Projects</button>
+<button class="filter-btn px-6 py-2 !rounded-button bg-gray-100 text-gray-700 whitespace-nowrap hover:bg-gray-200 transition-colors" data-filter="web">Web Design</button>
+<button class="filter-btn px-6 py-2 !rounded-button bg-gray-100 text-gray-700 whitespace-nowrap hover:bg-gray-200 transition-colors" data-filter="app">App Development</button>
+<button class="filter-btn px-6 py-2 !rounded-button bg-gray-100 text-gray-700 whitespace-nowrap hover:bg-gray-200 transition-colors" data-filter="ui">UI/UX Design</button>
+<button class="filter-btn px-6 py-2 !rounded-button bg-gray-100 text-gray-700 whitespace-nowrap hover:bg-gray-200 transition-colors" data-filter="brand">Branding</button>
+</div>
+<!-- Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="project-card group rounded-lg overflow-hidden shadow-sm border border-gray-100" data-category="web">
+<div class="relative h-64 overflow-hidden">
+<img src="ecomers.png">
+<div class="project-overlay absolute inset-0 bg-primary/80 flex items-center justify-center">
+<a href="#" class="bg-white text-primary px-6 py-2 !rounded-button font-medium whitespace-nowrap hover:bg-gray-100 transition-colors">View Project</a>
+</div>
+</div>
+<div class="p-6 bg-white">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-xl font-semibold text-gray-900">Luxe Commerce</h3>
+<span class="text-xs font-medium px-3 py-1 bg-blue-50 text-primary rounded-full">Web Design</span>
+</div>
+<p class="text-gray-700">A premium e-commerce platform with advanced filtering, seamless checkout, and personalized recommendations.</p>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="project-card group rounded-lg overflow-hidden shadow-sm border border-gray-100" data-category="app">
+<div class="relative h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=mobile%20fitness%20app%20interface%20with%20workout%20tracking%2C%20statistics%2C%20clean%20modern%20UI%20design%2C%20professional%20app%20mockup%20on%20smartphone%2C%20health%20tracking%20dashboard%2C%20activity%20monitoring%2C%20blue%20and%20green%20color%20scheme&width=600&height=400&seq=project2&orientation=landscape" alt="Fitness App" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+<div class="project-overlay absolute inset-0 bg-primary/80 flex items-center justify-center">
+<a href="#" class="bg-white text-primary px-6 py-2 !rounded-button font-medium whitespace-nowrap hover:bg-gray-100 transition-colors">View Project</a>
+</div>
+</div>
+<div class="p-6 bg-white">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-xl font-semibold text-gray-900">FitTrack Pro</h3>
+<span class="text-xs font-medium px-3 py-1 bg-green-50 text-green-600 rounded-full">App Development</span>
+</div>
+<p class="text-gray-700">A comprehensive fitness tracking application with personalized workout plans and nutrition guidance.</p>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="project-card group rounded-lg overflow-hidden shadow-sm border border-gray-100" data-category="ui">
+<div class="relative h-64 overflow-hidden">
+<img src="dashboard.png">
+<div class="project-overlay absolute inset-0 bg-primary/80 flex items-center justify-center">
+<a href="#" class="bg-white text-primary px-6 py-2 !rounded-button font-medium whitespace-nowrap hover:bg-gray-100 transition-colors">View Project</a>
+</div>
+</div>
+<div class="p-6 bg-white">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-xl font-semibold text-gray-900">DataViz Dashboard</h3>
+<span class="text-xs font-medium px-3 py-1 bg-purple-50 text-purple-600 rounded-full">UI/UX Design</span>
+</div>
+<p class="text-gray-700">An intuitive analytics dashboard with customizable widgets and real-time data visualization.</p>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="project-card group rounded-lg overflow-hidden shadow-sm border border-gray-100" data-category="brand">
+<div class="relative h-64 overflow-hidden">
+<img src="newscholars.png">
+<div class="project-overlay absolute inset-0 bg-primary/80 flex items-center justify-center">
+<a href="#" class="bg-white text-primary px-6 py-2 !rounded-button font-medium whitespace-nowrap hover:bg-gray-100 transition-colors">View Project</a>
+</div>
+</div>
+<div class="p-6 bg-white">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-xl font-semibold text-gray-900">New Scholars Education Website with Student Portal</h3>
+<span class="text-xs font-medium px-3 py-1 bg-orange-50 text-orange-600 rounded-full">Branding</span>
+</div>
+<p class="text-gray-700">This is a professional and responsive website developed for New Scholars Education, an 
+    institution based in Nekemte, Ethiopia. It includes essential public-facing pages like About Us, Services,
+     and Contact, alongside a locally-hosted Student Portal System. The portal allows students to log in and access personalized 
+     academic information, enhancing internal communication and management. While the main site is deployed online, 
+     the student system is currently functional on a local server for internal use.
 
-    <!-- Hero Section -->
-    <section id="student-testimonials">
-      <div class="container">
-        <h2>What Our Students Say?</h2>
-        <div class="testimonials">
-          <!-- Testimonial 1 -->
-          <div class="testimonial">
-            <p class="quote">
-              "New Scholars Education has transformed my learning experience. The resources are amazing!"
-            </p>
-            <div class="student-info">
-              <img src="img/testimonial-1.jpg" alt="Student 1">
-              <h4>Jane Doe</h4>
-              <p>Computer Science Student</p>
-            </div>
-          </div>
-          <!-- Testimonial 2 -->
-          <div class="testimonial">
-            <p class="quote">
-              "The instructors are incredibly supportive and the courses are well-structured."
-            </p>
-            <div class="student-info">
-              <img src="img/testimonial-2.jpg" alt="Student 2">
-              <h4>John Smith</h4>
-              <p>Business Administration Student</p>
-            </div>
-          </div>
-          <!-- Testimonial 3 -->
-          <div class="testimonial">
-            <p class="quote">
-              "I love how interactive and engaging the platform is. Highly recommended!"
-            </p>
-            <div class="student-info">
-              <img src="img/testimonial-3.jpg" alt="Student 3">
-              <h4>Emily Johnson</h4>
-              <p>Engineering Student</p>
-            </div>
-          </div>
-<!-- Testimonial 4 -->
-<div class="testimonial">
-  <p class="quote">
-    "The instructors are incredibly supportive and the courses are well-structured."
-  </p>
-  <div class="student-info">
-    <img src="img/testimonial-4.jpg" alt="Student 2">
-    <h4>John Smith</h4>
-    <p>Business Administration Student</p>
-  </div>
+</p>
+</div>
+</div>
+<!-- Project 5 -->
+<div class="project-card group rounded-lg overflow-hidden shadow-sm border border-gray-100" data-category="web">
+<div class="relative h-64 overflow-hidden">
+<img src="bankimage.png">
+<div class="project-overlay absolute inset-0 bg-primary/80 flex items-center justify-center">
+<a href="#" class="bg-white text-primary px-6 py-2 !rounded-button font-medium whitespace-nowrap hover:bg-gray-100 transition-colors">View Project</a>
+</div>
+</div>
+<div class="p-6 bg-white">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-xl font-semibold text-gray-900">Banking</h3>
+<span class="text-xs font-medium px-3 py-1 bg-blue-50 text-primary rounded-full">Web Design</span>
+</div>
+<p class="text-gray-700">This project is a user-friendly web-based system for managing bank customer information. It features a dynamic form that allows users to input, update, and delete customer data such as name, age, location, and occupation. Built using HTML, CSS, and JavaScript, the system displays real-time updates to the user list and offers an intuitive interface for seamless data handling.</p>
+</div>
+</div>
+<!-- Project 6 -->
+<div class="project-card group rounded-lg overflow-hidden shadow-sm border border-gray-100" data-category="app">
+<div class="relative h-64 overflow-hidden">
+<img src="android.png">
+<div class="project-overlay absolute inset-0 bg-primary/80 flex items-center justify-center">
+<a href="#" class="bg-white text-primary px-6 py-2 !rounded-button font-medium whitespace-nowrap hover:bg-gray-100 transition-colors">View Project</a>
+</div>
+</div>
+<div class="p-6 bg-white">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-xl font-semibold text-gray-900">TaskFlow</h3>
+<span class="text-xs font-medium px-3 py-1 bg-green-50 text-green-600 rounded-full">App Development</span>
+</div>
+<p class="text-gray-700">A productivity app that combines task management, note-taking, and calendar features in one seamless interface.</p>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<a href="project.html" data-readdy="true" class="inline-flex items-center justify-center px-8 py-3 border-2 border-primary text-primary !rounded-button font-medium whitespace-nowrap hover:bg-primary hover:text-white transition-colors">
+View All Projects
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section id="skills" class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold font-poppins text-gray-900">Skills & Expertise</h2>
+<div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+<p class="text-gray-700 mt-6 max-w-2xl mx-auto">My technical toolkit and professional expertise that I bring to every project.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<!-- Skills Chart -->
+<div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+<h3 class="text-xl font-semibold text-gray-900 mb-6">Technical Proficiency</h3>
+<!-- Skill Bar 1 -->
+<div class="mb-6">
+<div class="flex justify-between mb-1">
+<span class="text-gray-700 font-medium">Frontend Development</span>
+<span class="text-primary font-medium">95%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full" style="width: 95%"></div>
+</div>
+</div>
+<!-- Skill Bar 2 -->
+<div class="mb-6">
+<div class="flex justify-between mb-1">
+<span class="text-gray-700 font-medium">UI/UX Design</span>
+<span class="text-primary font-medium">90%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full" style="width: 90%"></div>
+</div>
+</div>
+<!-- Skill Bar 3 -->
+<div class="mb-6">
+<div class="flex justify-between mb-1">
+<span class="text-gray-700 font-medium">Responsive Design</span>
+<span class="text-primary font-medium">85%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full" style="width: 85%"></div>
+</div>
+</div>
+<!-- Skill Bar 4 -->
+<div class="mb-6">
+<div class="flex justify-between mb-1">
+<span class="text-gray-700 font-medium">Backend Development</span>
+<span class="text-primary font-medium">75%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full" style="width: 75%"></div>
+</div>
+</div>
+<!-- Skill Bar 5 -->
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700 font-medium">Project Management</span>
+<span class="text-primary font-medium">80%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full" style="width: 80%"></div>
+</div>
+</div>
+</div>
+<!-- Technology Stack -->
+<div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+<h3 class="text-xl font-semibold text-gray-900 mb-6">Technology Stack</h3>
+<div class="grid grid-cols-3 sm:grid-cols-4 gap-6">
+<!-- Tech 1 -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 flex items-center justify-center bg-blue-50 text-blue-500 rounded-lg mb-2">
+<i class="ri-html5-fill ri-2x"></i>
+</div>
+<span class="text-gray-700 text-sm">HTML5</span>
+</div>
+<!-- Tech 2 -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 flex items-center justify-center bg-blue-50 text-blue-600 rounded-lg mb-2">
+<i class="ri-css3-fill ri-2x"></i>
+</div>
+<span class="text-gray-700 text-sm">CSS3</span>
+</div>
+<!-- Tech 3 -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 flex items-center justify-center bg-yellow-50 text-yellow-500 rounded-lg mb-2">
+<i class="ri-javascript-fill ri-2x"></i>
+</div>
+<span class="text-gray-700 text-sm">JavaScript</span>
+</div>
+<!-- Tech 4 -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 flex items-center justify-center bg-blue-50 text-blue-600 rounded-lg mb-2">
+<i class="ri-reactjs-line ri-2x"></i>
+</div>
+<span class="text-gray-700 text-sm">React</span>
+</div>
+<!-- Tech 5 -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 flex items-center justify-center bg-green-50 text-green-600 rounded-lg mb-2">
+<i class="ri-vuejs-line ri-2x"></i>
+</div>
+<span class="text-gray-700 text-sm">Vue.js</span>
+</div>
+<!-- Tech 6 -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 flex items-center justify-center bg-purple-50 text-purple-600 rounded-lg mb-2">
+<i class="ri-bootstrap-fill ri-2x"></i>
+</div>
+<span class="text-gray-700 text-sm">Bootstrap</span>
+</div>
+<!-- Tech 7 -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 flex items-center justify-center bg-blue-50 text-blue-500 rounded-lg mb-2">
+<i class="ri-tailwind-css-line ri-2x"></i>
+</div>
+<span class="text-gray-700 text-sm">Tailwind</span>
+</div>
+<!-- Tech 8 -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 flex items-center justify-center bg-green-50 text-green-600 rounded-lg mb-2">
+<i class="ri-nodejs-line ri-2x"></i>
+</div>
+<span class="text-gray-700 text-sm">Node.js</span>
+</div>
+<!-- Tech 9 -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 flex items-center justify-center bg-blue-50 text-blue-700 rounded-lg mb-2">
+<i class="ri-database-2-line ri-2x"></i>
+</div>
+<span class="text-gray-700 text-sm">MongoDB</span>
+</div>
+<!-- Tech 10 -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 flex items-center justify-center bg-indigo-50 text-indigo-600 rounded-lg mb-2">
+<i class="ri-github-fill ri-2x"></i>
+</div>
+<span class="text-gray-700 text-sm">Git</span>
+</div>
+<!-- Tech 11 -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 flex items-center justify-center bg-red-50 text-red-500 rounded-lg mb-2">
+<i class="ri-file-pdf-2-line ri-2x"></i>
+</div>
+<span class="text-gray-700 text-sm">Figma</span>
+</div>
+<!-- Tech 12 -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 flex items-center justify-center bg-blue-50 text-blue-600 rounded-lg mb-2">
+<i class="ri-photoshop-line ri-2x"></i>
+</div>
+<span class="text-gray-700 text-sm">Photoshop</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Testimonials -->
+<div class="mt-20">
+<h3 class="text-2xl font-semibold font-poppins text-gray-900 text-center mb-12">Client Testimonials</h3>
+<div class="relative">
+<div id="testimonials-container" class="flex overflow-hidden relative">
+<div class="testimonial-slide min-w-full">
+<div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 relative">
+<div class="absolute top-0 right-0 transform translate-x-1/4 -translate-y-1/4 text-6xl text-primary opacity-20">
+<i class="ri-double-quotes-r"></i>
+</div>
+<p class="text-gray-700 italic mb-6 relative z-10">
+"Working with the development team to bring our vision to life has been a rewarding experience. The website not only reflects our mission 
+and values but also provides a seamless interface for students and visitors. The addition of the student portal system—though 
+currently operating locally—has already improved our internal operations. We’re excited about the future and proud of how this
+ platform is helping us connect, grow, and serve better."
+</p>
+<div class="flex items-center">
+<div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+<img src="">
+</div>
+<div>
+<h4 class="text-gray-900 font-medium">Dr. Inkosa</h4>
+<p class="text-gray-600 text-sm">CEO, New Scholars Education</p>
+</div>
+</div>
+</div>
 </div>
 
 
-        </div>
-      </div>
-    </section>
-    
 
-  <!-- About Us Section -->
-  <section class="about-uss" id="aboutt">
-    <h2>Who We Are?</h2>
-    <p style="line-height:2em;">New Scholars Education is dedicated to providing innovative learning solutions for students and educators. Our programs are designed to enhance critical thinking, promote academic excellence, and foster a passion for lifelong learning.</p>
-    <p style="line-height:2em;">At New Scholars Education, we are a team of passionate educators, innovators, 
-      and lifelong learners dedicated to transforming the educational experience. Our 
-      mission is to empower students to unlock their full potential and inspire a love
-       of learning that lasts a lifetime.
-
-      Founded on the principles of personalized education, collaboration, and excellence, 
-      we believe in creating an environment where every student feels valued, supported, 
-      and motivated to succeed. Our diverse team brings a wealth of expertise from various 
-      fields, working together to provide the most effective and innovative learning strategies.
-      
-      We are more than just an educational platform—we are a community committed to fostering 
-      curiosity, critical thinking, and personal growth. Whether you're looking to enhance your
-       academic skills or discover new passions, New Scholars Education is here to guide you every 
-       step of the way.</p>
-    <a href="about.html" class="btnn">Learn More About Us</a>
-  </section>
-
-  <!-- Programs Section -->
-  <section class="programss" id="programss">
-    <h2>Our Programs</h2>
-    <div class="program-listt">
-      <div class="programm" id="program1">
-        <h3>Short term trainig Services</h3>
-        <p>Unlock Your Unbelievable Potential with our Short term training services</p>
-      </div>
-      <div class="programm" id="program2">
-        <h3 id="program2h3">Formal Kids Teaching <br/>school service</h3>
-        <p id="program2p">Let's Rise Up our Children for future</p>
-      </div>
-      <div class="programm" id="program3">
-        <h3 id="program3h3">Leadership Academy</h3>
-        <p id="program3p">Building leadership skills for students through workshops and seminars.</p>
-      </div>
-    </div>
-    <a href="services.html" class="btnn"id="idbtn">See All Programs</a>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section class="testimonialss">
-    <h2>What Our Users Say</h2>
-    <div class="testimoniall">
-      <p>"Thanks to New Scholars, my child’s grades improved dramatically!"</p>
-      <span>– Parent of a student</span>
-    </div>
-    <div class="testimoniall">
-      <p>"The programs offered here are truly life-changing. I learned so much!"</p>
-      <span>– Short term trained student</span>
-    </div>
-  </section>
+<div class="testimonial-slide min-w-full">
+<div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 relative">
+<div class="absolute top-0 right-0 transform translate-x-1/4 -translate-y-1/4 text-6xl text-primary opacity-20">
+<i class="ri-double-quotes-r"></i>
+</div>
+<p class="text-gray-700 italic mb-6 relative z-10">
+"Awabi's ability to translate our vision into a tangible digital experience was impressive. He took the time to understand our business goals and created a solution that not only looks beautiful but also drives results. His communication throughout the project was excellent."
+</p>
+<div class="flex items-center">
+<div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+<img src="">
+</div>
+<div>
+<h4 class="text-gray-900 font-medium">Sarah Johnson</h4>
+<p class="text-gray-600 text-sm">Marketing Director, Elevate Brand</p>
+</div>
+</div>
+</div>
+</div>
 
 
-  <!-- Footer Start -->
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <!-- Quick Link Section -->
-        <div class="footer-column">
-          <h4>Quick Link</h4>
-          <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-            <li><a href="#privacy">Privacy Policy</a></li>
-            <li><a href="#terms">Terms & Conditions</a></li>
-            <li><a href="#faq">FAQs & Help</a></li>
-          </ul>
-        </div>
-  
-        <!-- Contact Section -->
-        <div class="footer-column">
-          <h4>Contact</h4>
-          <p><i class="fas fa-map-marker-alt"></i> 1st Floor st.mikael, Nekemte, Ethiopa</p>
-          <p><i class="fas fa-phone-alt"></i> 0576606900</p>
-          <p><i class="fas fa-envelope"></i> info@newscholarsedu.com</p>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-  
-        <!-- Gallery Section -->
-        <div class="footer-column">
-          <h4>Gallery</h4>
-          <div class="gallery">
-            <img src="img/photo1.jpg" alt="Gallery 1">
-            <img src="img/serv1.jpg" alt="Gallery 2">
-            <img src="img/childs.jpg" alt="Gallery 3">
-            <img src="img/femalep.jpg" alt="Gallery 4">
-           
-          </div>
-        </div>
-  
-        <!-- Newsletter Section -->
-        <div class="footer-column">
-          <h4>Newsletter</h4>
-          <p>Subscribe to our newsletter to get updates.</p>
-          <form id="frm">
-            <input type="email" placeholder="Your email">
-            <button type="submit">SignUp</button>
-          </form>
-        </div>
-      </div>
-    
-    </div>
-  </footer>
-  
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 New Scholars Education. All Rights Reserved.</p>
-    </footer>
 
-    <script src="js/main.js"></script>
+</div>
+<!-- Testimonial Navigation -->
+<div class="flex justify-center mt-8 space-x-2">
+<button id="testimonial-prev" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100 transition-colors">
+<i class="ri-arrow-left-s-line ri-lg"></i>
+</button>
+<div class="flex space-x-2">
+<button class="testimonial-dot w-3 h-3 rounded-full bg-primary"></button>
+<button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300"></button>
+<button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300"></button>
+</div>
+<button id="testimonial-next" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100 transition-colors">
+<i class="ri-arrow-right-s-line ri-lg"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Achievements & Certificates Section -->
+<section id="achievements" class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold font-poppins text-gray-900">Achievements & Certificates</h2>
+<div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+<p class="text-gray-700 mt-6 max-w-2xl mx-auto">Recognition and certifications that validate my expertise and commitment to continuous learning.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Achievements -->
+<div>
+<h3 class="text-2xl font-semibold text-gray-900 mb-8">Key Achievements</h3>
+<div class="space-y-6">
+<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:border-primary/30 transition-colors">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 flex items-center justify-center bg-blue-50 text-primary rounded-lg mr-4">
+<i class="ri-award-line ri-2x"></i>
+</div>
+<h4 class="text-xl font-medium text-gray-900">Best Design Award 2023</h4>
+</div>
+<p class="text-gray-700">Recognized for exceptional UI/UX design in the annual Digital Innovation Awards.</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:border-primary/30 transition-colors">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 flex items-center justify-center bg-blue-50 text-primary rounded-lg mr-4">
+<i class="ri-medal-line ri-2x"></i>
+</div>
+<h4 class="text-xl font-medium text-gray-900">Top Rated Developer</h4>
+</div>
+<p class="text-gray-700">Maintained 5-star rating with over 10+ client projects on leading testimonial</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:border-primary/30 transition-colors">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 flex items-center justify-center bg-blue-50 text-primary rounded-lg mr-4">
+<i class="ri-article-line ri-2x"></i>
+</div>
+<h4 class="text-xl font-medium text-gray-900">Leading Instructor at clubs</h4>
+</div>
+<p class="text-gray-700">Featured author in leading tech publications with 20+ projects on UI/UX and development.</p>
+</div>
+</div>
+</div>
+<!-- Certificates -->
+<div>
+<h3 class="text-2xl font-semibold text-gray-900 mb-8">Professional Certificates</h3>
+<div class="space-y-6">
+<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 group hover:border-primary/30 transition-colors">
+<div class="flex items-start">
+<div class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-blue-50 text-primary rounded-lg mr-4">
+<i class="ri-verified-badge-line ri-2x"></i>
+</div>
+<div>
+<h4 class="text-xl font-medium text-gray-900 mb-2">Ethio Coders AI Fundamentals</h4>
+<p class="text-gray-600 text-sm mb-3">Ethiocoders</p>
+<div class="flex items-center text-sm text-gray-500">
+<i class="ri-calendar-line mr-2"></i>
+<span>Issued Dec 2024</span>
+<span class="mx-2">•</span>
+<a href="www.udacity.com/certificate/e/29ce04c0-41c9-11f0-b376-1b3d75990ba9" class="view-certificate text-primary hover:text-primary/80 flex items-center" data-certificate-id="google-ux">
+View Certificate
+<i class="ri-external-link-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 group hover:border-primary/30 transition-colors">
+<div class="flex items-start">
+<div class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-blue-50 text-primary rounded-lg mr-4">
+<i class="ri-verified-badge-line ri-2x"></i>
+</div>
+<div>
+<h4 class="text-xl font-medium text-gray-900 mb-2">Android Development Fundamentals</h4>
+<p class="text-gray-600 text-sm mb-3">Ethio Coders</p>
+<div class="flex items-center text-sm text-gray-500">
+<i class="ri-calendar-line mr-2"></i>
+<span>Issued Oct 2024</span>
+<span class="mx-2">•</span>
+<a href="#" class="view-certificate text-primary hover:text-primary/80 flex items-center" data-certificate-id="google-ux1">
+View Certificate
+<i class="ri-external-link-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 group hover:border-primary/30 transition-colors">
+<div class="flex items-start">
+<div class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-blue-50 text-primary rounded-lg mr-4">
+<i class="ri-verified-badge-line ri-2x"></i>
+</div>
+<div>
+<h4 class="text-xl font-medium text-gray-900 mb-2">Responsive Web Design</h4>
+<p class="text-gray-600 text-sm mb-3">Sololearn</p>
+<div class="flex items-center text-sm text-gray-500">
+<i class="ri-calendar-line mr-2"></i>
+<span>Issued Aug 2022</span>
+<span class="mx-2">•</span>
+<a href="#" class="view-certificate text-primary hover:text-primary/80 flex items-center" data-certificate-id="google-ux2">
+View Certificate
+<i class="ri-external-link-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 group hover:border-primary/30 transition-colors">
+<div class="flex items-start">
+<div class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-blue-50 text-primary rounded-lg mr-4">
+<i class="ri-verified-badge-line ri-2x"></i>
+</div>
+<div>
+<h4 class="text-xl font-medium text-gray-900 mb-2">Website Development Fundamentals</h4>
+<p class="text-gray-600 text-sm mb-3">Sololearn</p>
+<div class="flex items-center text-sm text-gray-500">
+<i class="ri-calendar-line mr-2"></i>
+<span>Issued May 2023</span>
+<span class="mx-2">•</span>
+<a href="#" class="view-certificate text-primary hover:text-primary/80 flex items-center" data-certificate-id="google-ux3">
+View Certificate
+<i class="ri-external-link-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold font-poppins text-gray-900">Get In Touch</h2>
+<div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+<p class="text-gray-700 mt-6 max-w-2xl mx-auto">Have a project in mind or want to discuss potential opportunities? I'd love to hear from you.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+<!-- Contact Form -->
+<div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+<h3 class="text-xl font-semibold text-gray-900 mb-6">Send Me a Message</h3>
+<form id="contact-form">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+<div>
+<label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+<input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary/20" placeholder="Your name" required>
+</div>
+<div>
+<label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+<input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary/20" placeholder="Your email" required>
+</div>
+</div>
+<div class="mb-6">
+<label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+<input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary/20" placeholder="Subject of your message">
+</div>
+<div class="mb-6">
+<label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+<textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded resize-none focus:ring-2 focus:ring-primary/20" placeholder="Your message" required></textarea>
+</div>
+<button type="submit" class="w-full bg-primary text-white px-6 py-3 !rounded-button font-medium whitespace-nowrap hover:bg-primary/90 transition-colors">
+Send Message
+<i class="ri-send-plane-fill ml-2"></i>
+</button>
+</form>
+</div>
+<!-- Contact Information -->
+<div>
+<div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 mb-8">
+<h3 class="text-xl font-semibold text-gray-900 mb-6">Contact Information</h3>
+<div class="space-y-4">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-50 text-primary rounded-lg mr-4 mt-1">
+<i class="ri-mail-line ri-lg"></i>
+</div>
+<div>
+<h4 class="text-gray-900 font-medium">Email</h4>
+<a href="mailto:hello@alexandermitchell.com" class="text-gray-700 hover:text-primary">wabitena@gmail.com</a>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-50 text-primary rounded-lg mr-4 mt-1">
+<i class="ri-phone-line ri-lg"></i>
+</div>
+<div>
+<h4 class="text-gray-900 font-medium">Phone</h4>
+<a href="tel:+14155552671" class="text-gray-700 hover:text-primary">+251961570007</a>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-50 text-primary rounded-lg mr-4 mt-1">
+<i class="ri-map-pin-line ri-lg"></i>
+</div>
+<div>
+<h4 class="text-gray-900 font-medium">Location</h4>
+<p class="text-gray-700">Addis Ababa, Ethiopia</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-50 text-primary rounded-lg mr-4 mt-1">
+<i class="ri-time-line ri-lg"></i>
+</div>
+<div>
+<h4 class="text-gray-900 font-medium">Working Hours</h4>
+<p class="text-gray-700">Monday - Friday, 9:00 AM - 6:00 PM PST</p>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<h4 class="text-gray-900 font-medium mb-4">Connect With Me</h4>
+<div class="flex space-x-4">
+<a href="https://www.linkedin.com/in/mouse-delivery-775a93369?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-primary hover:text-white text-gray-600 rounded-full transition-colors">
+<i class="ri-linkedin-fill ri-lg"></i>
+</a>
+<a href="https://github.com/wabitana" class="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-primary hover:text-white text-gray-600 rounded-full transition-colors">
+<i class="ri-github-fill ri-lg"></i>
+</a>
+<a href="https://t.me/Wabi_Tena" class="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-primary hover:text-white text-gray-600 rounded-full transition-colors">
+<i class="ri-telegram-fill ri-lg"></i>
+</a>
+<a href="https://www.instagram.com/wabitena?igsh=d29tdTcyZHI5MjZ1" class="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-primary hover:text-white text-gray-600 rounded-full transition-colors">
+<i class="ri-instagram-fill ri-lg"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=100078928085875" class="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-primary hover:text-white text-gray-600 rounded-full transition-colors">
+<i class="ri-facebook-fill ri-lg"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Location Map -->
+<div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+<h3 class="text-xl font-semibold text-gray-900 mb-6">My Location</h3>
+<div class="w-full h-[300px] rounded-lg overflow-hidden" style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png'); background-size: cover; background-position: center;"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="md:col-span-2">
+<a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 inline-block">Wabi Tena</a>
+<p class="text-gray-400 mb-6 max-w-md">
+Creating meaningful digital experiences through thoughtful design and clean code. Let's build something amazing together.
+</p>
+<div class="flex space-x-4">
+<a href="https://www.linkedin.com/in/mouse-delivery-775a93369?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary text-white rounded-full transition-colors">
+<i class="ri-linkedin-fill ri-lg"></i>
+</a>
+<a href="https://github.com/wabitana" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary text-white rounded-full transition-colors">
+<i class="ri-github-fill ri-lg"></i>
+</a>
+<a href="https://t.me/Wabi_Tena" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary text-white rounded-full transition-colors">
+<i class="ri-telegram-fill ri-lg"></i>
+</a>
+<a href="https://www.instagram.com/wabitena?igsh=d29tdTcyZHI5MjZ1" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary text-white rounded-full transition-colors">
+<i class="ri-instagram-fill ri-lg"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-medium text-white mb-4">Quick Links</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+<li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Me</a></li>
+<li><a href="#projects" class="text-gray-400 hover:text-white transition-colors">Projects</a></li>
+<li><a href="#skills" class="text-gray-400 hover:text-white transition-colors">Skills</a></li>
+<li><a href="#achievements" class="text-gray-400 hover:text-white transition-colors">Achievements</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-medium text-white mb-4">Contact</h4>
+<ul class="space-y-2">
+<li class="flex items-center text-gray-400">
+<i class="ri-mail-line mr-2"></i>
+<a href="mailto:hello@alexandermitchell.com" class="hover:text-white transition-colors">wabitena@gmail.com</a>
+</li>
+<li class="flex items-center text-gray-400">
+<i class="ri-phone-line mr-2"></i>
+<a href="tel:+14155552671" class="hover:text-white transition-colors">+251961570007</a>
+</li>
+<li class="flex items-center text-gray-400">
+<i class="ri-map-pin-line mr-2"></i>
+<span>Addis Ababa, Ethiopia</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">
+© 2025 Wabi Tena. All rights reserved.
+</p>
+<div class="flex items-center space-x-4">
+<a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+<span class="text-gray-600">•</span>
+<a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Scripts -->
+<script id="mobile-menu-script">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuButton.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+// Toggle icon
+const icon = mobileMenuButton.querySelector('i');
+if (mobileMenu.classList.contains('hidden')) {
+icon.classList.remove('ri-close-line');
+icon.classList.add('ri-menu-line');
+} else {
+icon.classList.remove('ri-menu-line');
+icon.classList.add('ri-close-line');
+}
+});
+// Close mobile menu when clicking on a link
+const mobileLinks = mobileMenu.querySelectorAll('a');
+mobileLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.add('hidden');
+const icon = mobileMenuButton.querySelector('i');
+icon.classList.remove('ri-close-line');
+icon.classList.add('ri-menu-line');
+});
+});
+});
+</script>
+<script id="project-filter-script">
+document.addEventListener('DOMContentLoaded', function() {
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+filterButtons.forEach(button => {
+button.addEventListener('click', function() {
+// Remove active class from all buttons
+filterButtons.forEach(btn => {
+btn.classList.remove('active', 'bg-primary', 'text-white');
+btn.classList.add('bg-gray-100', 'text-gray-700');
+});
+// Add active class to clicked button
+this.classList.add('active', 'bg-primary', 'text-white');
+this.classList.remove('bg-gray-100', 'text-gray-700');
+const filter = this.getAttribute('data-filter');
+// Show/hide projects based on filter
+projectCards.forEach(card => {
+if (filter === 'all' || card.getAttribute('data-category') === filter) {
+card.style.display = 'block';
+} else {
+card.style.display = 'none';
+}
+});
+});
+});
+});
+</script>
+<script id="testimonial-carousel-script">
+document.addEventListener('DOMContentLoaded', function() {
+const container = document.getElementById('testimonials-container');
+const slides = document.querySelectorAll('.testimonial-slide');
+const dots = document.querySelectorAll('.testimonial-dot');
+const prevButton = document.getElementById('testimonial-prev');
+const nextButton = document.getElementById('testimonial-next');
+let currentIndex = 0;
+let isTransitioning = false;
+// Add transition style to container
+container.style.transition = 'transform 0.5s ease-in-out';
+function updateCarousel(index) {
+if (isTransitioning) return;
+isTransitioning = true;
+currentIndex = index;
+container.style.transform = `translateX(-${currentIndex * 100}%)`;
+// Update dots
+dots.forEach((dot, idx) => {
+if (idx === currentIndex) {
+dot.classList.remove('bg-gray-300');
+dot.classList.add('bg-primary');
+} else {
+dot.classList.remove('bg-primary');
+dot.classList.add('bg-gray-300');
+}
+});
+// Reset transition lock after animation completes
+setTimeout(() => {
+isTransitioning = false;
+}, 500);
+}
+// Previous button
+prevButton.addEventListener('click', () => {
+const newIndex = (currentIndex - 1 + slides.length) % slides.length;
+updateCarousel(newIndex);
+});
+// Next button
+nextButton.addEventListener('click', () => {
+const newIndex = (currentIndex + 1) % slides.length;
+updateCarousel(newIndex);
+});
+// Dot navigation
+dots.forEach((dot, index) => {
+dot.addEventListener('click', () => {
+updateCarousel(index);
+});
+});
+// Auto-advance slides every 5 seconds
+let autoplayInterval = setInterval(() => {
+const newIndex = (currentIndex + 1) % slides.length;
+updateCarousel(newIndex);
+}, 5000);
+// Pause autoplay on hover
+container.addEventListener('mouseenter', () => {
+clearInterval(autoplayInterval);
+});
+// Resume autoplay on mouse leave
+container.addEventListener('mouseleave', () => {
+autoplayInterval = setInterval(() => {
+const newIndex = (currentIndex + 1) % slides.length;
+updateCarousel(newIndex);
+}, 5000);
+});
+// Set initial state
+updateCarousel(0);
+});
+</script>
+
+
+
+
+<script id="contact-form-script">
+document.addEventListener('DOMContentLoaded', function() {
+const contactForm = document.getElementById('contact-form');
+contactForm.addEventListener('submit', async(e)=> {
+e.preventDefault();
+// Get form values
+const name = document.getElementById('name').value;
+const email = document.getElementById('email').value;
+const subject = document.getElementById('subject').value;
+const message = document.getElementById('message').value;
+// Simple validation
+if (!name || !email || !message) {
+alert('Please fill in all required fields.');
+return;
+}
+// Email validation
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!emailRegex.test(email)) {
+alert('Please enter a valid email address.');
+return;
+}
+// In a real application, you would send this data to a server
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+
+    const response = await fetch("/Contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
+
+    if (response.ok) {
+      alert("Message sent successfully!");
+      e.target.reset();
+    } else {
+      alert("Failed to send message. Please try again.");
+    }
+// Reset form
+contactForm.reset();
+});
+});
+</script>
+<script id="scroll-animation-script">
+document.addEventListener('DOMContentLoaded', function() {
+// Logo click handler
+const brandLogo = document.getElementById('brand-logo');
+if (brandLogo) {
+brandLogo.addEventListener('click', function(e) {
+e.preventDefault();
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+});
+}
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80, // Adjust for header height
+behavior: 'smooth'
+});
+// Update URL without page reload
+history.pushState(null, null, targetId);
+}
+});
+});
+// Update active nav link on scroll
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-link');
+window.addEventListener('scroll', function() {
+let current = '';
+sections.forEach(section => {
+const sectionTop = section.offsetTop - 100;
+const sectionHeight = section.clientHeight;
+if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+current = section.getAttribute('id');
+}
+});
+navLinks.forEach(link => {
+link.classList.remove('active');
+if (link.getAttribute('href') === `#${current}`) {
+link.classList.add('active');
+}
+});
+});
+});
+</script>
+<!-- Certificate Modal -->
+<div id="certificate-modal" class="fixed inset-0 z-50 hidden">
+<div class="absolute inset-0 bg-gray-900/50 backdrop-blur-sm"></div>
+<div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl bg-white rounded-lg shadow-xl">
+<div class="relative p-6">
+<button id="close-certificate-modal" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700">
+<i class="ri-close-line ri-lg"></i>
+</button>
+<div class="space-y-6">
+<div class="aspect-video rounded-lg overflow-hidden bg-gray-100">
+<img id="certificate-image" class="w-full h-full object-cover" alt="Certificate">
+</div>
+<div class="space-y-4">
+<h3 id="certificate-title" class="text-2xl font-semibold text-gray-900"></h3>
+<div class="flex flex-wrap gap-4 text-sm text-gray-600">
+<div class="flex items-center">
+<i class="ri-calendar-line mr-2"></i>
+<span id="certificate-date"></span>
+</div>
+<div class="flex items-center">
+<i class="ri-fingerprint-line mr-2"></i>
+<span id="certificate-id"></span>
+</div>
+</div>
+<p id="certificate-description" class="text-gray-700"></p>
+<div class="flex items-center gap-4">
+<a id="certificate-verify" href="#" target="_blank" class="inline-flex items-center text-primary hover:text-primary/80">
+<i class="ri-shield-check-line mr-2"></i>
+Verify Certificate
+</a>
+<button id="certificate-download" class="inline-flex items-center px-4 py-2 bg-primary text-white !rounded-button hover:bg-primary/90">
+<i class="ri-download-line mr-2"></i>
+Download PDF
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script id="certificate-modal-script">
+document.addEventListener('DOMContentLoaded', function() {
+const certificateData = {
+'google-ux': {
+title: 'Ethio Coders AI Fundamentals',
+issuer: 'Udacity',
+date: 'December 2024',
+id: 'CERT-UX-2024-12345',
+image: 'aicirt.png',
+description: 'Comprehensive course covering AI fundamentals, machine learning concepts, and practical applications in real-world scenarios. Includes hands-on projects and assessments.',
+verifyLink: 'https://www.udacity.com/certificate/e/29ce04c0-41c9-11f0-b376-1b3d75990ba9'
+
+
+
+
+}
+
+, // Add more certificates as needed
+
+
+'google-ux1': {
+title: 'Android Development Fundamentals',
+issuer: 'Udacity',
+date: 'December 2024',
+id: 'CERT-UX-2024-12349',
+image: 'andimage.jpg',
+description: 'Comprehensive course covering Android development fundamentals, including UI design, app architecture, and best practices. Includes hands-on projects and assessments.',
+
+verifyLink: 'https://www.udacity.com/certificate/e/29ce04c0-41c9-11f0-b376-1b3d75990ba9'
+}
+,
+'google-ux2': {
+title: 'Responsive Web Design',
+issuer: 'Sololearn',
+date: 'August 2022',
+
+id: 'CERT-UX-2024-12349',
+image: 'reswebdisg.jpg',
+description: 'Comprehensive course covering responsive web design principles, including fluid grids, flexible images, and media queries. Includes hands-on projects and assessments.',
+
+verifyLink: '#'
+}
+,
+
+'google-ux3': {
+title: 'Website Development Fundamentals',
+issuer: 'Sololearn',
+date: 'May 2023',
+id: 'CERT-UX-2024-12349',
+image: 'webdev.jpg',
+description: 'Comprehensive course covering Web development fundamentals, including UI design, web architecture, and best practices. Includes hands-on projects and assessments.',
+
+verifyLink: '#'
+}
+
+
+
+
+
+};
+
+
+
+
+
+const modal = document.getElementById('certificate-modal');
+const closeBtn = document.getElementById('close-certificate-modal');
+const certificateLinks = document.querySelectorAll('.view-certificate');
+function showModal(certId) {
+const data = certificateData[certId];
+if (!data) return;
+document.getElementById('certificate-title').textContent = data.title;
+document.getElementById('certificate-date').textContent = data.date;
+document.getElementById('certificate-id').textContent = data.id;
+document.getElementById('certificate-description').textContent = data.description;
+document.getElementById('certificate-verify').href = data.verifyLink;
+document.getElementById('certificate-image').src = data.image;
+document.getElementById('certificate-image').alt = `${data.title} Certificate`;
+modal.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+}
+function hideModal() {
+modal.classList.add('hidden');
+document.body.style.overflow = '';
+}
+certificateLinks.forEach(link => {
+link.addEventListener('click', (e) => {
+e.preventDefault();
+const certId = link.getAttribute('data-certificate-id');
+showModal(certId);
+});
+});
+closeBtn.addEventListener('click', hideModal);
+modal.addEventListener('click', (e) => {
+if (e.target === modal) {
+hideModal();
+}
+});
+document.addEventListener('keydown', (e) => {
+if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+hideModal();
+}
+});
+document.getElementById('certificate-download').addEventListener('click', () => {
+// In a real application, this would trigger the PDF download
+console.log('Downloading certificate...');
+});
+});
+</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
